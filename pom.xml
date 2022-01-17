@@ -8,12 +8,17 @@
 	<name>common</name>
 	<description>Common Library</description>
 	<properties>
-		<java.version>16</java.version>
+		<java.version>17</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<lombok.version>1.18.20</lombok.version>
-		<maven.compiler.source>16</maven.compiler.source>
-		<maven.compiler.target>16</maven.compiler.target>
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
+		<groupId>${project.groupId}</groupId>
+		<artifactId>${project.artifactId}</artifactId>
+		<packaging>${project.packaging}</packaging>
+		<version>${project.version}</version>
+		<file>target/${project.name}-${project.version}.jar</file>
 	</properties>
 	<dependencies>
 		<dependency>
