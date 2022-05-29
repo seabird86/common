@@ -12,6 +12,13 @@
 ## For Release
 
 
+### Devtools
+
+```
+-Dspring.devtools.restart.enabled=false
+```
+
+
 ### Reference Documentation
 
 https://intellipaat.com/community/6786/how-to-add-local-jar-files-to-a-maven-project

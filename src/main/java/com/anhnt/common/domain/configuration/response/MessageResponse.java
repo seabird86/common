@@ -1,16 +1,20 @@
-package com.anhnt.common.domain.customer.response;
+package com.anhnt.common.domain.configuration.response;
 
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
-import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import java.util.List;
+
 @Data
-@AllArgsConstructor
 @ToString
+@AllArgsConstructor
+@NoArgsConstructor
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
-public class CustomerCreateResponse {
-    private Long id;
+public class MessageResponse {
+    private List<Message> messages;
 }
+

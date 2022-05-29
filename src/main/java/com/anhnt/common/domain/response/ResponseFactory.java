@@ -10,6 +10,9 @@ public class ResponseFactory {
     }
 
     public static <T> ResponseEntity<BodyEntity<T>> success(T data) {
-        return ResponseEntity.ok((BodyEntity<T>)BodyEntity.builder().data(data).build());
+//        return ResponseEntity.ok((BodyEntity<T>)BodyEntity.builder().data(data).build());
+        BodyEntity body = new BodyEntity();
+        body.setData(data);
+        return ResponseEntity.ok(body);
     }
 }
