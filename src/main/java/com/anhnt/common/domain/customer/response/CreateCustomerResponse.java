@@ -11,6 +11,6 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
-public class CustomerCreateResponse {
+public class CreateCustomerResponse {
     private Long id;
 }
