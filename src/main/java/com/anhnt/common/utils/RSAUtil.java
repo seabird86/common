@@ -79,4 +79,16 @@ public class RSAUtil {
             return reader.readPemObject();
         }
     }
+    public int a;
+    public boolean b;
+    public String c;
+    public static void main(String args[]){
+
+        System.out.println(new RSAUtil().c);
+    }
+    public void print() {
+        int num;
+        num = 1;
+        System.out.println("The number is : " + num);
+    }
 }

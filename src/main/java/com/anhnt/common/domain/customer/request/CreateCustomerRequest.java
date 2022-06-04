@@ -19,7 +19,7 @@ import java.time.OffsetTime;
 @NoArgsConstructor
 @ToString
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
-public class CustomerCreateRequest {
+public class CreateCustomerRequest {
 
   @NotNull
   @NotBlank

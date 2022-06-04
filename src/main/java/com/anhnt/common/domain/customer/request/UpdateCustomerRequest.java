@@ -16,7 +16,7 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @ToString
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
-public class CustomerUpdateRequest {
+public class UpdateCustomerRequest {
   private String name;
   private String mobile;
   private LocalDate dateOfBirth;
