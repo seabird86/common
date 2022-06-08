@@ -11,6 +11,7 @@ public class ErrorFactory {
         public static final BiFunction<String, List, ErrorEntity> INVALID_SIGNATURE = (lang, args) -> new ErrorEntity(HttpStatus.BAD_REQUEST, "AGW00001", args, lang);
         public static final BiFunction<String, List, ErrorEntity> INTERNAL_SERVER_ERROR = (lang, args) -> new ErrorEntity(HttpStatus.INTERNAL_SERVER_ERROR, "AGW99999", args, lang);
         public static final BiFunction<String, List, ErrorEntity> HEADER_REQUIRED = (lang, args) -> new ErrorEntity(HttpStatus.BAD_REQUEST, "AGW00002", args, lang);
+        public static final BiFunction<String, List, ErrorEntity> TOO_MANY_REQUESTS = (lang, args) -> new ErrorEntity(HttpStatus.TOO_MANY_REQUESTS, "AGW00003", args, lang);
     }
     public final static class CustomerError {
         public static final Function<List,ErrorEntity> INTERNAL_SERVER_ERROR = (args) -> new ErrorEntity(HttpStatus.INTERNAL_SERVER_ERROR, "CUS99999", args);
