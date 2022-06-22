@@ -5,7 +5,7 @@ import org.springframework.http.ResponseEntity;
 import java.util.HashMap;
 
 public class ResponseFactory {
-    public static ResponseEntity success() {
+    public static ResponseEntity<BodyEntity<HashMap<Object,Object>>> success() {
         return success(new HashMap<>());
     }
 

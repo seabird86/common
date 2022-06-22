@@ -1,11 +1,8 @@
 package com.anhnt.common.domain.response;
 
 import com.anhnt.common.domain.configuration.response.Message;
-import org.springframework.web.servlet.LocaleResolver;
-import org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver;
 
 import java.util.List;
-import java.util.Locale;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
