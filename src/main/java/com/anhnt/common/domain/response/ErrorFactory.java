@@ -1,10 +1,10 @@
 package com.anhnt.common.domain.response;
 
-import org.springframework.http.HttpStatus;
-
 import java.util.List;
 import java.util.function.BiFunction;
 import java.util.function.Function;
+
+import org.springframework.http.HttpStatus;
 
 public class ErrorFactory {
     public final static class ApiGatewayError {
@@ -15,6 +15,14 @@ public class ErrorFactory {
     }
     public final static class CustomerError {
         public static final Function<List,ErrorEntity> INTERNAL_SERVER_ERROR = (args) -> new ErrorEntity(HttpStatus.INTERNAL_SERVER_ERROR, "CUS99999", args);
+        public static final Function<List,ErrorEntity> BALANCE_MUST_BE_POSITIVE = (args) -> new ErrorEntity(HttpStatus.BAD_REQUEST, "CUS00001", args);
+        public static final Function<List,ErrorEntity> USERNAME_EXISTS = (args) -> new ErrorEntity(HttpStatus.BAD_REQUEST, "CUS00002", args);
+    }
+
+    public final static class PaymentError {
+        public static final Function<List,ErrorEntity> INTERNAL_SERVER_ERROR = (args) -> new ErrorEntity(HttpStatus.INTERNAL_SERVER_ERROR, "PMT99999", args);
+        public static final Function<List,ErrorEntity> INVALID_PAYEE = (args) -> new ErrorEntity(HttpStatus.BAD_REQUEST, "PMT00001", args);
+        public static final Function<List,ErrorEntity> BALANCE_AMOUNT_MUST_GREATER_THAN = (args) -> new ErrorEntity(HttpStatus.BAD_REQUEST, "PMT00002", args);
     }
 
     public final static class ConfigurationError {
